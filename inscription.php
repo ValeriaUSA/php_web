@@ -8,7 +8,7 @@
 <body>
     <h1> Sign up page</h1>
      <div>
-            <form action="utilisateur.php" method="get">
+            <form action="utilisateur.php" method="post">
                 <fieldset>
             <legend>Données de connexion</legend>
         <div>
@@ -48,8 +48,8 @@
         <div>
             <!-- RADIO , name insures that ONLY 1 can be choosen , otherwise use CHECKBOX -->
             Genre
-            <input type="radio" name=genre value="Homme">Homme 
-            <input type="radio" name=genre value="Femme">Femme 
+            <input type="radio" name=genre value="homme">Homme 
+            <input type="radio" name=genre value="femme">Femme 
         </div>
 
         <div>
