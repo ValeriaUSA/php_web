@@ -9,7 +9,9 @@
 <body>
     <h1> Wellcome</h1>
     <p> My application <strong>PHP</strong></p>
-
+    <a href="utilisateur.php?username=Mitroglou&ville=Marseille&age=55">
+        Connaître un peu plus sur la légende ?
+    </a>
 
 
 
