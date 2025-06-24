@@ -13,7 +13,7 @@ if (is_null($_SERVER['HTTP_REFERER']) or (!str_contains($_SERVER['HTTP_REFERER']
 //   'REQUEST_METHOD' => string 'GET' (length=3)
 //   'HTTP_REFERER' => string 'http://localhost/php-web/' (length=25)
 
-$username = "Name by default"; 
+$username = "Name by default";
 // here if the user inputs nothing we use the value above
 if ($_REQUEST['username'] != "") {
     $username = $_REQUEST['username'];
@@ -43,16 +43,18 @@ $_SESSION['nom'] = $username;
 
 <!DOCTYPE html>
 <html lang="fr">
+<?php include "./_dependences.php";?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
 </head>
+
 <body>
-  <h1> User management</h1>  
-     <p>
+    <h1> User management</h1>
+    <p>
         Bonjour
-         <?php
+        <?php
         echo "$civilite $username, vous avez $age ans et êtes de $ville";
 
         ?>
@@ -63,4 +65,5 @@ $_SESSION['nom'] = $username;
 
 
 </body>
+
 </html>
