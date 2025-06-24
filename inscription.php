@@ -11,7 +11,6 @@
 <body>
     <h1 class="text-primary text-center my-4"> Sign up page</h1>
     <main class="container">
-        
             <form action="utilisateur.php" method="post">
                 <fieldset>
                     <legend>Sign up information</legend>
