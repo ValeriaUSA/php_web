@@ -2,7 +2,14 @@
 // démarrer la session
 session_start();
 
-var_dump($_SERVER);
+//here i authorise to land on this web page only from curtain pages otherwise it redirects to index (accuille)
+if (is_null($_SERVER['HTTP_REFERER']) or (!str_contains($_SERVER['HTTP_REFERER'], 'index.php') and !str_contains($_SERVER['HTTP_REFERER'], 'inscription.php'))) {
+    header("location: index.php"); // redirection
+    exit(); // ne pas lire la suite
+}
+
+
+// var_dump($_SERVER);
 //   'REQUEST_METHOD' => string 'GET' (length=3)
 //   'HTTP_REFERER' => string 'http://localhost/php-web/' (length=25)
 
