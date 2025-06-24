@@ -2,6 +2,9 @@
 // démarrer la session
 session_start();
 
+var_dump($_SERVER);
+//   'REQUEST_METHOD' => string 'GET' (length=3)
+//   'HTTP_REFERER' => string 'http://localhost/php-web/' (length=25)
 
 $username = "Name by default"; 
 // here if the user inputs nothing we use the value above

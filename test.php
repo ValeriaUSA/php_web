@@ -8,7 +8,17 @@ if (isset($_COOKIE['nom'])) {
 }
 if (isset($_SESSION['nom'])) {
     $nom_s = $_SESSION['nom'];
+};
+
+//Here i remove the seesion by clicking on the link (pointing to the same page) 
+
+if (str_contains($_SERVER['HTTP_REFERER'], 'test.php')) {
+    session_unset(); // supprimer toutes les variables session
+    session_destroy();
+    $nom_c = "";//here we remove tha variables
+    $nom_s = "";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,10 +38,12 @@ if (isset($_SESSION['nom'])) {
     <p>Nom : <?php echo $nom_s ?></p>
     <p>Nom : <?= $nom_s ?></p>
       <p>
-        <a href="vider_session.php">
+        <a href="test.php">
             Vider la session
         </a>
     </p>
 </body>
 
 </html>
+
+
